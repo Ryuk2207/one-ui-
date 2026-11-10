@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pure AMOLED True Black: 0% power draw on Galaxy A16 5G OLED display -->
+    <color name="pure_black">#000000</color>
+    <!-- Crisp pure white for minimal clock and date -->
+    <color name="pure_white">#FFFFFF</color>
+    <!-- Subtle subdued white for date (80% opacity) -->
+    <color name="subdued_white">#CCFFFFFF</color>
+    <!-- Minimal battery text color (65% opacity to avoid distraction) -->
+    <color name="battery_text_color">#A6FFFFFF</color>
+</resources>

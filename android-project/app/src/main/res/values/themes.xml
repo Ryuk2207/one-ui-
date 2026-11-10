@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.HeadlessAOD" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Pure AMOLED True Black Background -->
+        <item name="android:windowBackground">@color/pure_black</item>
+        <item name="android:colorBackground">@color/pure_black</item>
+        <item name="android:statusBarColor">@color/pure_black</item>
+        <item name="android:navigationBarColor">@color/pure_black</item>
+
+        <!-- No window title, full screen immersive -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+
+        <!-- Disable window transitions for instantaneous seamless black overlay -->
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+
+        <!-- Allow rendering inside cutout area (camera punch hole) -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>

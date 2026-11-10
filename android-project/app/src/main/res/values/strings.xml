@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Headless AOD</string>
+    <string name="accessibility_service_description">Provides an ultra-lightweight, zero-permission Always On Display overlay with battery indicator and customizable clock positions when your screen turns off.</string>
+    <string name="tip_instructions">Drag clock anywhere to reposition • Long-press clock to switch lock screen style • Double-tap to wake</string>
+    <string name="settings_title">Headless AOD Settings</string>
+    <string name="clock_style_title">Lock Screen Clock Style</string>
+    <string name="clock_position_title">Clock Display Position</string>
+</resources>

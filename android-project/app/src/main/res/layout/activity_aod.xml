@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootAodLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pure_black"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- 
+      Draggable & Configurable Clock & Battery Container:
+      Can be placed in any space on the display (saved to SharedPreferences).
+      Also shifted dynamically by -15px to +15px every 5 minutes to prevent OLED burn-in.
+    -->
+    <LinearLayout
+        android:id="@+id/clockContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- STYLE 1: Standard Horizontal One UI Lockscreen Clock (HH:mm) -->
+        <TextView
+            android:id="@+id/tvTimeHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.02"
+            android:textColor="@color/pure_white"
+            android:textSize="68sp"
+            android:visibility="visible" />
+
+        <!-- STYLE 2: Signature One UI Stacked Lockscreen Clock (Hours over Minutes) -->
+        <LinearLayout
+            android:id="@+id/layoutTimeStacked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvHoursStacked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.8"
+                android:textColor="@color/pure_white"
+                android:textSize="64sp" />
+
+            <TextView
+                android:id="@+id/tvMinutesStacked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.8"
+                android:textColor="@color/pure_white"
+                android:textSize="64sp" />
+        </LinearLayout>
+
+        <!-- Date Display: Thin, elegant date string below clock -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif-light"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.04"
+            android:textColor="@color/subdued_white"
+            android:textSize="15sp" />
+
+        <!-- Minimal Battery Percentage: Updated via Intent.ACTION_BATTERY_CHANGED -->
+        <TextView
+            android:id="@+id/tvBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-light"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.03"
+            android:textColor="@color/battery_text_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Brief Help Toast overlay on long-press (vanishes quickly) -->
+    <TextView
+        android:id="@+id/tvAodTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:background="#1AFFFFFF"
+        android:paddingStart="12dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="6dp"
+        android:text="@string/tip_instructions"
+        android:textColor="#88FFFFFF"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+</FrameLayout>
