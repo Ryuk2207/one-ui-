@@ -1,6 +1,0 @@
-{
-  "name": "OneUI AOD Headless - Android 14 Always On Display",
-  "description": "Ultra-lightweight, zero-permission, headless Always On Display (AOD) engine for Samsung One UI 6 / Android 14 with burn-in protection, double-tap wake, and GitHub Actions CI.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
